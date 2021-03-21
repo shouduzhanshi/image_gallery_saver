@@ -1,0 +1,56 @@
+group 'com.example.imagegallerysaver'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+        maven { url "https://jitpack.io" }
+        maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url 'https://dl.bintray.com/aweme-open-sdk-team/public' }
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+        maven { url "https://jitpack.io" }
+        maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url 'https://dl.bintray.com/aweme-open-sdk-team/public' }
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/java'
+    }
+    defaultConfig {
+        minSdkVersion 16
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
