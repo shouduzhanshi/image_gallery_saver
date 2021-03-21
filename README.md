@@ -18,7 +18,7 @@ dependencies:
 Your project need create with swift.
 Add the following keys to your Info.plist file, located in <project root>/ios/Runner/Info.plist:
  * NSPhotoLibraryAddUsageDescription - describe why your app needs permission for the photo library. This is called Privacy - Photo Library Additions Usage Description in the visual editor
- 
+
  ##  Android
  You need to ask for storage permission to save an image to the gallery. You can handle the storage permission using [flutter_permission_handler](https://github.com/BaseflowIT/flutter-permission-handler).
  In Android version 10, Open the manifest file and add this line to your application tag
@@ -51,3 +51,5 @@ _saveVideo() async {
     print(result);
  }
 ```
+## 兼容安卓11
+## IO异步操作.
